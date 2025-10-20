@@ -131,3 +131,11 @@ def company_directory():
             print("❌ Invalid option. Try again.")
 
 company_directory()
+
+#Design Memo
+# Recursive insertion worked to break down the chain of command in the company by inserting employees (children) under the manager (parent).
+# It uses a base (current_node) to set a root (manager), then we use a recursive case to break down the base into two variables (employees).
+# Challenges I faced when finding a a right spot for a new employee was how to place them under the root or parent. I overcame this by establishing current_node left and right, then if there were None,
+# I would insert that value under current_node left or right. This gave an easy way to assign new employees under their parent to represent a easy chain of command.
+# Trees might be preferrable when working with big heirarchical datasets because you can then search for certain terms, and it will only search through a certain
+# list of items before searching through the other items. This maximizes efficency and time. 
